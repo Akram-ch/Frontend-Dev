@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1 id="title">Survey Form </h1>
+<p id="description">Thank you for taking the time to help us improve the platform</p>
+<!--Form-->
+<form id="survey-form">
+    <label for="name" id="name-label">name : </label>
+    <input type="text" id="name" placeholder="name" required>
+    <br>
+    <br>
+    <label for="email" id="email-label">e-mail : </label>
+    <input type="email" id="email" placeholder="email" required>
+    <br>
+    <br>
+    <label for="number" id="number-label">number : </label>
+    <input type="number" id="number" min="0" max="100" placeholder="number">
+    <br>
+    <br>
+    <!--Dropdown menu-->
+    <label for="dropdown">Select a pet </label>
+    <select id="dropdown">
+        <option value="Cat">Cat</option>
+        <option value="Dog">Dog</option>
+    </select>
+    <br>
+    <br>
+    <!--Radio menu-->
+    <fieldset>
+        <legend> would you recommend to a friend? </legend>
+        <label for="yes">Yes</label>
+        <input type="radio" value="yes" name="drone" checked>
+        <br>
+        <br>
+        <label for="no">No</label>
+        <input type="radio" value="no" name="drone">
+    </fieldset>
+
+    <!--Checkbox menu-->
+    <fieldset>
+        <legend>
+            what is your favorite feature?
+        </legend>
+        <label for="frontend">Front End </label>
+        <input type="checkbox" name="frontend" value="front">
+        <br>
+        <br>
+        <label for="backend">Back end </label>
+        <input type="checkbox" name="backend" value="back">
+
+    </fieldset>
+
+    <label for="feedback">leave us some feedback </label>
+    <br>
+    <textarea name="feedback" rows="5" cols="33"> </textarea>
+    <br>
+    <br>
+    <input type="submit" id="submit" value="submit">
+</form>
+<!--end of form-->
+</body>
+
+</html>
