@@ -1,5 +1,8 @@
 # Responsive Design Course notes
 
+Personal Token key : 
+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
+
 ## I - Cat Photo app : 
 ### HTML attributes :
 An HTML attribute is a piece of markup language used to adjust the behavior or display of an HTML element. For example, attributes can be used to change the color, size, or functionality of HTML elements.
@@ -135,7 +138,7 @@ It was a dark and stormy night...
     `<link rel="stylesheet" href="styles.css">`
 
 ___
-## CSS : 
+## CSS : Box Model
 In the CSS box model, every HTML element is treated as a box with four areas.
 
 Imagine you receive a box from your favorite online retailer -- the content is the item in the box, or in our case, a header, paragraph, or image element.
@@ -145,3 +148,34 @@ Think of the border like the cardboard box your item was shipped in.
 Margin is the area outside of the box, and can be used to control the space between other boxes or elements.
 
 ![screenshot](./css.png)
+
+#### to round off edges:   `border-radius : 10px;`
+
+
+### Dynamic boxes : `  width: calc(25% - 20px);`
+___
+## CSS FLEXBOX : Image Gallery:
+
+Flexbox is a one-dimensional CSS layout approach that focuses on the flow of content. It offers the ability to control the way items are spaced and aligned within a container.
+
+To set an element to use Flexbox, you give it a display property set to flex
+
+Flexbox can be thought of as having two axes, the **main axis** and the **cross axis**. The main axis is determined by the **flex-direction** property. If flex-direction is set to **row** or **row-reverse**, the main axis is horizontal. If flex-direction is set to **column** or **column-reverse**, the main axis is vertical.
+
+The **flex-wrap** property determines how your items should behave when the flex container is too small. Setting this property to **wrap** will allow your items to wrap to the next row/column (depending on your main axis), where **nowrap** will prevent your items from wrapping. When this is set to nowrap, items may either shrink to fit or overflow.
+
+The **justify-content** property determines how the items inside a flex container are positioned along the __main axis__, affecting their position and the space around them.
+
+The **align-items** property positions the flex content along the __cross axis__. In this case, with your flex-direction set to row, your cross axis would be vertical.
+
+you can use the **object-fit** property to determine how images should behave.
+
+### Flex properties: 
+* **flex-start**: Items align to the left side of the container.
+* **flex-end**: Items align to the right side of the container.
+* **center**: Items align at the center of the container.
+* **space-between**: Items display with equal spacing between them.
+* **space-around**: Items display with equal spacing around them.
+* **row**: Items are placed the same as the text direction.
+* **row-reverse**: Items are placed opposite to the text direction.
+* 
