@@ -274,4 +274,25 @@ body {
 
 Keep in mind that it’s important to add a fallback font. If you’re linking to an external API, you have no guarantee that the URL won’t change, or that the external API won’t go down at some point. Having a reasonable fallback means that if something goes wrong, at least your site won’t look completely broken.
 
-### Downloaded Fonts
+### Text styles: 
+#### line height: 
+
+Line height adjusts the space between lines in wrapped text. Adding a little line-height can increase readability
+``` css
+p.line-height {
+  line-height: 1;
+}
+```
+### text-transform
+Text transform simply changes the case of the given text. You can use this, for example, to force your heading tags to be all uppercase, or to capitalize every word.
+``` css
+text-transform: capitalize;
+text-transform: uppercase;
+text-transform: lowercase;
+```
+
+### text shadow :
+As you might expect, **text-shadow** adds a shadow around the text in the selected element. This one is best used sparingly, but can be used to great effect in headings or other presentational text.
+```css
+text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+```
