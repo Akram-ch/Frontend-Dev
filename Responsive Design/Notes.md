@@ -178,4 +178,100 @@ you can use the **object-fit** property to determine how images should behave.
 * **space-around**: Items display with equal spacing around them.
 * **row**: Items are placed the same as the text direction.
 * **row-reverse**: Items are placed opposite to the text direction.
-* 
+
+## CSS : Typography
+**import open sans font-family** : 
+``` html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800">
+```
+
+``` css
+  font-family: "Open Sans", sans-serif;
+  ```
+
+**font size** : 
+``` css
+font-size: 16px;
+```
+
+**make text bolder**: 
+``` css
+  font-weight: 800;
+```
+**align text**: 
+```css
+text-align: center;
+```
+**top and bottom margin of -4px and a left and right margin of 0** : 
+``` css
+margin: -4px 0;
+```
+### The letter-spacing property can be used to adjust the space between each character of text in an element.
+```css
+  letter-spacing: 0.15px;
+```
+### The **float** property is used to place an element on the left or right of its container, allowing other content (such as text) to wrap around it.
+
+
+### The **rem** unit stands for **root em**, and is relative to the font size of the **html** element.
+
+### avoid overflows :
+```CSS
+overflow: hidden;
+```
+
+### **clear** property, lear the float property, pushing the divider and any following content down below the float text
+
+___
+
+## Intermediate HTML and CSS
+### Default styles :
+* [The Meyer reset](https://meyerweb.com/eric/tools/css/reset/)
+* [normalize.css](https://nicolasgallagher.com/about-normalize-css/)
+
+### CSS Units : 
+ * #### absolute units:
+    Absolute units are those that are always the same in any context. px is an absolute unit because the size of a pixel doesn’t change relative to anything else on the page. In fact, px is the only absolute unit you should be using for web projects. The rest of them make more sense in a print setting because they are related to physical units such as in (inch) and cm (centimeter).
+* #### Relative units :
+    em and rem both refer to a font size, though they are often used to define other sizes in CSS. You’ll see both of them often so we’re going to explain both, but as a rule-of-thumb, prefer rem.
+
+  1em is the font-size of an element (or the element’s parent if you’re using it to set font-size). So, for example, if an element’s font-size is 16px, then setting its width to 4em would make its width 64px (16 * 4 == 64).
+
+  1rem is the font-size of the root element (either :root or html). The math works the same with rem as it did with em, but without the added complexity of keeping track of the parent’s font size. Relying on em could mean that a particular size could change if the context changes, which is very likely not the behavior you want.
+
+  Using a relative size like rem to define font sizes across your website is recommended. Many browsers allow users to change the base font-size to increase readability. If at all possible, it is advisable to respect a user’s wishes regarding font size. You’ll learn more about this from the reading assignments.
+* #### Viewport units :
+    The units vh and vw relate to the size of the viewport. Specifically, **1vh** is equal to 1% of the viewport height and **1vw** is equal to 1% of the viewport width. These can be useful any time you want something to be sized relative to the viewport, examples including full-height heroes, full-screen app-like interfaces.
+
+
+[article](https://codyloyd.com/2021/css-units/)
+
+### Fonts : 
+* #### The system font stack : 
+    If you use the font-family property to change to a font like impact or Times New Roman, and those fonts do not happen to be installed on your user’s computer, then a fallback font will be displayed. If you have not defined a fallback, then the default HTML font will be used, which is often somewhat ugly. For this reason, it’s common to see somewhat long stacks of fonts listed on projects.
+``` CSS
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+```
+#### Online font libraries : 
+[Google Fonts](https://fonts.google.com/)
+
+[Font Library List](https://fontlibrary.org/)
+
+[Adobe Fonts](https://fonts.adobe.com/)
+    
+  To use a font from one of these libraries, go to the website, select a font and then copy a snippet from the website to import that font from their server into your website. You’ll be given either a < link > tag to put in your HTML like so….
+  ``` css
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+```
+ or an @import tag that can be dropped at the top of a CSS file
+ ``` CSS
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+```
+
+Keep in mind that it’s important to add a fallback font. If you’re linking to an external API, you have no guarantee that the URL won’t change, or that the external API won’t go down at some point. Having a reasonable fallback means that if something goes wrong, at least your site won’t look completely broken.
+
+### Downloaded Fonts
