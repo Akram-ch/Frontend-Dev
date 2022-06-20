@@ -469,3 +469,33 @@ h1 {
  *  the largest value (60rem)
 
 The **clamp()** CSS function uses these values to set the smallest value, ideal value and largest value. In the above example, this would mean the smallest acceptable font-size would be 320px and the largest would be 60rem. The ideal font-size would be 80vw.
+___
+## Custom properties : 
+### **Using custom properties** : 
+The syntax for declaring and accessing a custom property is really simple and not too different from how we write normal rule declarations:
+
+``` css
+.error-modal {
+  --color-error-text: red;
+  --modal-border: 1px solid black;
+  --modal-font-size: calc(2rem + 5vw);
+
+  color: var(--color-error-text);
+  border: var(--modal-border);
+  font-size: var(--modal-font-size);
+}
+```
+### **Fallback Values** :
+The **var()** function actually accepts two parameters. The first parameter we’ve already gone over, which is the custom property we want to assign. The second parameter is an optional fallback value. When a fallback value is provided in addition to a custom property, the fallback value will be used if the custom property is invalid or hasn’t been declared yet. We can even pass in another custom property as a fallback, which can have its own fallback value as well!
+
+``` css
+.fallback {
+  --color-text: white;
+
+  background-color: var(--undeclared-property, black);
+  color: var(--undeclared-again, var(--color-text, yellow));
+}
+```
+
+### **scope** : scope
+In the first example above, you may have noticed that we declared and then accessed our custom properties within the same declaration block. That’s because the scope of a custom property is determined by the selector. This scope includes the selector the custom property was declared for as well as any descendants of that selector. If you’re familiar with how scope works in JavaScript, this sort of behavior should feel a little similar.
