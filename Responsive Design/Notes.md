@@ -499,3 +499,15 @@ The **var()** function actually accepts two parameters. The first parameter we�
 
 ### **scope** : scope
 In the first example above, you may have noticed that we declared and then accessed our custom properties within the same declaration block. That’s because the scope of a custom property is determined by the selector. This scope includes the selector the custom property was declared for as well as any descendants of that selector. If you’re familiar with how scope works in JavaScript, this sort of behavior should feel a little similar.
+
+___
+## Frameworks and preprocessors :
+### **Frameworks overview** :
+Frameworks like Bootstrap and Tailwind do a lot of the heavy lifting of packaging up commonly used CSS code for you, even icons and interactions (like menu dropdowns). They are designed to abstract away the process of coding intuitive, reusable, and responsive elements. A CSS framework is ultimately just a bundle of CSS that you can use and access, using the classes defined by the framework. For example, many frameworks provide a class called .btn that will add all the needed styles to your buttons, without your having to write any CSS. In general, all you have to do to use a framework is understand how it expects you to lay out your site, and which classes it uses to designate its particular batch of styles.
+
+### **Preprocessors overview** :
+Preprocessors (aka precompilers) are languages that help you write CSS more easily. They reduce code repetition and provide all sorts of time-saving and code-saving features. A few examples: preprocessors allow you to write loops, join multiple stylesheets, and nest classes.
+
+CSS preprocessors are extensions to vanilla CSS that provide some extra functionality such as nesting, mixins, and variables. When you run the processor, it takes your code and turns it into vanilla CSS that you can import into your project.
+
+Preprocessors do have some unique and helpful tools, but many of their most helpful features have been implemented in vanilla CSS, so it might not be worth the overhead of learning one unless you think you really need these features.

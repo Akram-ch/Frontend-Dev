@@ -1,0 +1,78 @@
+:root {
+  --txt: "Poppins", sans-serif;
+}
+
+body {
+  background-image: url("wallpaper.webp");
+  background-size: 100%;
+}
+
+.left {
+  margin-left: 0px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.left .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  margin-top: 150px;
+  margin-left: 0px;
+  width: 41%;
+  height: 120px;
+}
+
+.left .box {
+  color: white;
+  position: absolute;
+  left: 0;
+  margin-top: 150px;
+  margin-left: 0px;
+  width: 41%;
+  height: 120px;
+  background-color: black;
+  opacity: 0.45;
+}
+.container .name {
+  color: white;
+  font-family: var(--txt);
+  margin-right: 20px;
+  font-size: 35px;
+  opacity: 0.99;
+}
+
+.container img {
+  opacity: 0.99;
+  height: 100px;
+  width: 100px;
+}
+
+.droit {
+  display: flex;
+  justify-content: flex-end;
+  opacity: 1;
+  height: 100%;
+  width: 59%;
+}
+
+.droit .box {
+  color: white;
+  font-family: var(--txt);
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 59%;
+  background-color: black;
+  opacity: 1;
+}
+
+.box p {
+  color: white;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
